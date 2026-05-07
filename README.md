@@ -146,4 +146,4 @@ A full project presentation is available at [`SkillSetu_AI_Presentation.pptx`](.
 
 ## License
 
-Hackathon prototype — Karnataka Government Workforce Initiative © 2026
+TwinLogic Hackathon prototype — Karnataka Government Workforce Initiative © 2026
