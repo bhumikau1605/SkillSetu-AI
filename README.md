@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SkillSetu AI — AI Workforce Intelligence Platform
+
+> **Karnataka Government Initiative · Hackathon Prototype**
+>
+> ಕರ್ನಾಟಕದ ಕಾರ್ಮಿಕರಿಗಾಗಿ AI ಮೌಲ್ಯಮಾಪನ ವ್ಯವಸ್ಥೆ
+
+An end-to-end AI-powered platform that automates workforce assessment for Karnataka's skilled workers — supporting Kannada, Hindi, and English.
+
+---
+
+## Features
+
+- **AI Video Interviews** — Automated interviews with real-time transcription and emotion analysis
+- **Smart Scoring Engine** — Multi-dimensional scoring: communication, confidence, relevance, and authenticity
+- **Fraud Detection** — Detects duplicate candidates, multiple faces, and audio inconsistencies automatically
+- **Multilingual Support** — Kannada-first experience with full Hindi and English support
+- **Analytics Dashboard** — District-wise insights, classification trends, and workforce readiness reports
+- **Workforce Classification** — Auto-classifies candidates: Job Ready, Needs Training, or Manual Review
+
+---
+
+## How It Works
+
+```
+Register → AI Interview → AI Analysis → Classification
+```
+
+1. **Register** — Candidate fills basic details and selects preferred language
+2. **AI Interview** — Answers 5 questions via webcam in Kannada, Hindi, or English
+3. **AI Analysis** — Scores communication, confidence, relevance, and authenticity
+4. **Classification** — Auto-classified into workforce readiness categories with a full report
+
+---
+
+## Tech Stack
+
+| Layer | Technologies |
+|---|---|
+| Frontend | Next.js 14, TypeScript, Tailwind CSS, Framer Motion |
+| Charts | Recharts |
+| UI Primitives | Radix UI, Lucide React |
+| State | Zustand |
+| AI / ML | Speech-to-Text (multilingual), Emotion Analysis, Fraud Detection CV, NLP Scoring |
+
+---
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── page.tsx              # Landing page
+│   ├── interview/page.tsx    # 4-step interview flow
+│   └── admin/
+│       ├── page.tsx          # Dashboard overview
+│       ├── candidates/       # Candidate table
+│       ├── fraud/            # Fraud review panel
+│       ├── reports/          # Export reports
+│       └── settings/
+├── components/
+│   ├── landing/              # Hero, Features, CTA, Navbar
+│   ├── interview/            # Registration, Interview, Analysis, Classification screens
+│   ├── dashboard/            # StatsCards, Charts, CandidateTable, SidebarNav
+│   └── ui/                   # Button, Card, Badge, ScoreBar, ThemeToggle
+└── lib/
+    ├── types.ts              # TypeScript interfaces
+    ├── mockData.ts           # Mock candidate & score generation
+    ├── store.ts              # Zustand global store
+    └── utils.ts
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Route | Description |
+|---|---|
+| `/` | Landing page |
+| `/interview` | Start a candidate interview |
+| `/admin` | Admin dashboard |
+| `/admin/candidates` | Full candidate list |
+| `/admin/fraud` | Fraud review panel |
+| `/admin/reports` | Export reports |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Workforce Classification
 
-To learn more about Next.js, take a look at the following resources:
+| Status | Criteria |
+|---|---|
+| ✅ Job Ready | Overall ≥ 80 and Authenticity ≥ 75 |
+| 🟡 Needs Training | Overall ≥ 65 |
+| 🔵 Manual Review | Overall ≥ 50 |
+| ⚪ Low Confidence | Overall < 50 |
+| 🔴 Fraud Risk | Fraud score > 65 |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Fraud Detection Flags
 
-## Deploy on Vercel
+| Flag | Severity |
+|---|---|
+| Multiple Faces | High |
+| Audio Mismatch | Medium |
+| Low Visibility | Low |
+| Duplicate Candidate | High |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Supported Skill Categories
+
+Construction · Electrical · Plumbing · Welding · Carpentry · Tailoring · Agriculture · IT Hardware · Automotive · Healthcare Aide
+
+---
+
+## Districts Covered
+
+Bengaluru Urban · Mysuru · Belagavi · Hubballi-Dharwad · Mangaluru · Kalaburagi · Ballari · Shivamogga · Tumakuru · Vijayapura *(and 20 more)*
+
+---
+
+## Presentation
+
+A full project presentation is available at [`SkillSetu_AI_Presentation.pptx`](./SkillSetu_AI_Presentation.pptx) (10 slides).
+
+---
+
+## License
+
+Hackathon prototype — Karnataka Government Workforce Initiative © 2026
