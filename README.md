@@ -1,5 +1,17 @@
 # SkillSetu AI — AI Workforce Intelligence Platform
 
+---
+
+## 👥 Team TwinLogic
+
+| | |
+|---|---|
+| **Prototype** | SkillSetu AI |
+| **Theme** | Theme 5 |
+| **Members** | Brinda U · Bhumika U |
+
+---
+
 > **Karnataka Government Initiative · Hackathon Prototype**
 >
 > ಕರ್ನಾಟಕದ ಕಾರ್ಮಿಕರಿಗಾಗಿ AI ಮೌಲ್ಯಮಾಪನ ವ್ಯವಸ್ಥೆ
